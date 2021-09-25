@@ -36,7 +36,7 @@ console.group("Tríangulos");
 
 //console.log("La altura del triangulo es: " + alturaTriangulo +"cm");
 
-function perimetroTriangulo(lado1, lado2,base){ 
+function perimetroTriangulo(lado1, lado2, base){ 
     return lado1 +  lado2 + base;
 }
 //console.log("El perímetro  del triangulo es: " + perimetroTriangulo +"cm");
@@ -101,3 +101,31 @@ function calcularAreaCuadrado(){
     alert(perimetro);
 
 }
+
+// Formulas HTML and JS Triangulo 
+
+function calcularPerimetroTriangulo(){
+    const inputTL1 = document.getElementById("InputTrianguloL1");
+    const valueTL1 = parseFloat(inputTL1.value);
+    const inputTL2 = document.getElementById("InputTrianguloL2");
+    const valueTL2 = parseFloat(inputTL2.value);
+    const inputB = document.getElementById("InputTrianguloB");
+    const valueB = parseFloat(inputB.value);
+
+
+    const perimetro = perimetroTriangulo(valueTL1, valueTL2, valueB);
+    console.log(perimetro);
+    alert(perimetro);
+}
+
+function calcularAreaTriangulo(){
+    const inputTLa = document.getElementById("InputTrianguloLa");
+    const valueTLa = parseFloat(inputTLa.value);
+    const inputBa = document.getElementById("InputTrianguloBa");
+    const valueBa = parseFloat(inputBa.value);
+
+    const perimetro = areaTriangulo(valueTLa, valueBa);
+    console.log(perimetro);
+    alert(perimetro);
+}
+
