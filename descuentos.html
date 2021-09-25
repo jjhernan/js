@@ -15,12 +15,20 @@
         <form>
             <label for="InputPrice">Escribe el precio de tu producto</label>
             <input id="InputPrice" type="number">
-            <label for="InputDescuento">Escribe el precio de tu producto</label>
+            <label for="InputDescuento">Escribe el descuento de tu producto</label>
             <input id="InputDescuento" type="number">
             <button type="button" onclick="onclickButtonPriceDiscount()">
-                Calcular el precio 
+                Calcular el precio con descuento en %
             </button>
             <p id="ResultP"></p>
+            <label for="InputPriceCupon">Escribe el precio de tu producto</label>
+            <input id="InputPriceCupon" type="number">
+            <label for="InputCoupon">Escribe el cúpon de tu producto</label>
+            <input id="InputCoupon" type="text">
+            <button type="button" onclick="onclickButtonPriceCoupon()">
+                Calcular el precio con descuento de cupon
+            </button>
+            <p id="ResultPC"></p>
         </form>
     </section>
     <script src="./descuentos.js"></script>
