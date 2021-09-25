@@ -129,3 +129,34 @@ function calcularAreaTriangulo(){
     alert(perimetro);
 }
 
+// Formulas para Círculo
+
+
+function calculardiametroCirculo(){
+    const input = document.getElementById("InputCirculoDiametro");
+    const value = parseFloat(input.value);
+
+    const diametro = diametroCirculo(value);
+    console.log(diametro);
+    alert(diametro);
+}
+
+function calcularPerimetroCirculo(){
+    const input = document.getElementById("InputCirculoPerimetro");
+    const value = parseFloat(input.value);
+
+    const diametro = diametroCirculo(value);
+    const diametroPI = diametro * PI;
+    console.log(diametroPI);
+    alert(diametroPI);
+}
+
+function calcularAreaCirculo(){
+    const input = document.getElementById("InputCirculoArea");
+    const value = parseFloat(input.value);
+
+    const area = areaCirculo(value);
+    console.log(area);
+    alert(area);
+}
+ 
