@@ -7,10 +7,25 @@
     precioConDescuento
 });*/
 
-const coupons = [
+/*const coupons = [
     "JuanDC_es_Batman",
     "pero_no_le_digas_a_nadie",
     "es_un_secreto"
+];*/
+
+const coupons = [
+    {
+        name: "JuanDC_es_Batman",
+        discount: 15,
+    },
+    {
+        name: "pero_no_le_digas_a_nadie",
+        discount: 25,
+    },
+    {
+        name: "es_un_secreto",
+        discount: 30,
+    }
 ];
 
 
@@ -31,7 +46,7 @@ function onclickButtonPriceDiscount(){
 }
 
 function onclickButtonPriceCoupon(){
-    let descuento;
+    //let descuento;
     const inputPrice = document.getElementById("InputPriceCupon");
     const priceValue = parseFloat(inputPrice.value);
     const inputCoupon = document.getElementById("InputCoupon");
@@ -53,7 +68,7 @@ function onclickButtonPriceCoupon(){
         
     }*/
 
-    if(!coupons.includes(couponValue)){
+    /*if(!coupons.includes(couponValue)){
         alert("¡Ups! Cupón " + couponValue + " no válido");
     } else if (couponValue === "JuanDC_es_Batman"){
         descuento = 15;
@@ -62,11 +77,22 @@ function onclickButtonPriceCoupon(){
 
     } else if (couponValue === "es_un_secreto"){
         descuento = 30;
+    }*/
+
+    const isCouponValueValid = function(coupon){
+        return coupon.name === couponValue;
     }
 
-    
-    const precioConDescuento = calcularPrecioConDescuento(priceValue,descuento);
-    const ResultPC = document.getElementById("ResultPC");
-    ResultPC.innerText =  "El precio con descuento de cupon es: $" + precioConDescuento;
+    const userCoupon = coupons.find(isCouponValueValid);
+
+    if(!userCoupon) {
+        alert("¡Ups! El cupon " + couponValue + " No válido");
+    } else {
+        const descuento = userCoupon.discount;
+        const precioConDescuento = calcularPrecioConDescuento(priceValue,descuento);
+        const ResultPC = document.getElementById("ResultPC");
+        ResultPC.innerText =  "El precio con descuento de cupon es: $" + precioConDescuento;
+    }
+
 }
 
