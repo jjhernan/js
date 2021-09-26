@@ -12,3 +12,10 @@
 - Seconfd Step: Implementing JS formulas
 - Third Step: Creating formulas 
 - Four Step: Integrating HTML and JS 
+
+# Workshop #3: Promedio,  Media,  Moda 
+
+- First Step: Defing formulas 
+- Seconfd Step: Implementing JS formulas
+- Third Step: Creating formulas 
+- Four Step: Integrating HTML and JS 
